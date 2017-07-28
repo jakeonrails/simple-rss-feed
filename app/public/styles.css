@@ -1,0 +1,30 @@
+.star-form {
+  display: inline-block;
+}
+
+.star-form.unfilled .star > span:hover:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.star-form.filled .star > span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.title {
+  display: inline-block;
+  font-size: 16px;
+  color: #000000;
+}
+.post-wrapper {
+  width: 100%;
+}
+button {
+  border: 0;
+  background: none;
+  outline: none;
+}
+ .page-title {
+   text-decoration: underline;
+ }

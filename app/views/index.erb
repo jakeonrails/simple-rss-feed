@@ -1,0 +1,20 @@
+<h1 class="page-title">NASA Breaking News</h1>
+<% @posts.each do |post| %>
+  <div class="post-wrapper">
+    <a href="<%= post[:link] %>" target="_blank">
+      <h2 class="title" id=<%= post[:id] %>>
+        <%= post[:title] %>
+      </h2>
+    </a>
+    <form class="star-form <% if post[:is_favorite] %>filled<% else %>unfilled<% end %>"
+          method="post"
+          action="/">
+      <input type="hidden" name="post_id" value="<%= post[:id] %>" />
+      <button type="submit">
+        <div class="star">
+          <span>&#9734;</span>
+        </div>
+      </button>
+    </form>
+  </div>
+<% end %>
